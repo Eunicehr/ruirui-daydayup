@@ -1,3 +1,14 @@
+---
+layout: post
+title: "github-pages"
+date:   2022-01-05
+categories: [blog]
+tags: [blog]
+pinned: false
+toc: true
+author: cute-rui
+---
+
 
 
 ## typora
@@ -18,7 +29,7 @@
 
 - ![image-20220105135359241](https://s2.loli.net/2022/01/05/YmEONs1Ut7crpdu.png)
 
-- 生成token，复制,代会的picgo插件配置需要
+- 生成token，复制,待会的picgo插件配置需要
 
   ![image-20220105135507307](https://s2.loli.net/2022/01/05/aURO4WTuErlX87e.png)
 
@@ -228,6 +239,18 @@ python md.py --name $1
 ```
 
 
+
+1. ```
+   ./md.sh 文件名
+   ```
+
+   在C:\Users\lenovo\Desktop\ruirui-daydayup中右键get bash，./md.sh+文件名在posts中创建新项目，修改分类和标签等
+
+2. ```
+   ./push.sh
+   ```
+
+   在C:\Users\lenovo\Desktop\ruirui-daydayup中右键get bash，. push.sh将新项目上传至blog
 
 
 
