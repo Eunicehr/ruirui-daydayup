@@ -20,7 +20,7 @@ def get_args():
 if __name__=="__main__":
     args=get_args()
     filename = datetime.now().strftime('%Y-%m-%d')+"-"+args.name+".md"
-    filename = os.path.join('C:\\Users\\lenovo\Desktop\\ruirui-daydayup\\_posts', filename)
+    filename = os.path.join('_posts', filename)
     f =  open(filename, "w",encoding='utf-8')
     f.write(
         f"""---
