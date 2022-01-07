@@ -1,4 +1,17 @@
+---
+layout: post
+title: "github-pages"
+date:   2022-01-05
+categories: [python]
+tags: [python]
+pinned: false
+toc: true
+author: cute-rui
+---
+
 # Jupyter notebook入门
+
+
 
 ## 创建新笔记
 
