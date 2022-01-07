@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "github-pages"
+title: "jupyter"
 date:   2022-01-07
 categories: [python]
-tags: [python]
+tags: [工具]
 pinned: false
 toc: true
 author: cute-rui
