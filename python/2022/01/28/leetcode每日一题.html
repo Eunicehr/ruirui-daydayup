@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>leetcode每日一题 | guanguang</title>
+<meta name="generator" content="Jekyll v4.2.1">
+<meta property="og:title" content="leetcode每日一题">
+<meta name="author" content="cute-rui">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="leetcode每日一题">
+<meta property="og:description" content="leetcode每日一题">
+<link rel="canonical" href="https://eunicehr.github.io//ruirui-daydayup/python/2022/01/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98.html">
+<meta property="og:url" content="https://eunicehr.github.io//ruirui-daydayup/python/2022/01/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98.html">
+<meta property="og:site_name" content="guanguang">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-01-28T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="leetcode每日一题">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"cute-rui"},"description":"leetcode每日一题","@type":"BlogPosting","headline":"leetcode每日一题","dateModified":"2022-01-28T00:00:00+00:00","datePublished":"2022-01-28T00:00:00+00:00","url":"https://eunicehr.github.io//ruirui-daydayup/python/2022/01/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://eunicehr.github.io//ruirui-daydayup/python/2022/01/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/ruirui-daydayup/assets/css/main.css">
+  <script src="/ruirui-daydayup/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://eunicehr.github.io//ruirui-daydayup/feed.xml" title="guanguang">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/ruirui-daydayup/">
+  <img class="site-favicon" title="guanguang" src="" onerror="this.style.display='none'">
+  guanguang
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/ruirui-daydayup/about.html">ABOUT</a><a class="page-link" href="/ruirui-daydayup/archives.html">ARCHIVES</a><a class="page-link" href="/ruirui-daydayup/categories.html">CATEGORIES</a><a class="page-link" href="/ruirui-daydayup/">HOME</a><a class="page-link" href="/ruirui-daydayup/tags.html">TAGS</a>
+
+
+
+
+<span class="page-link">
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: '',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  (function() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline"> leetcode每日一题</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-01-28T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Jan 28, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 34 mins</span>
+  </p>
+<div class="post-tags"><a class="post-tag" href="/ruirui-daydayup/tags.html#leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98">#leetcode每日一题</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <h1 id="leetcode每日一题">leetcode每日一题</h1>
+
+<h2 id="111">1.11</h2>
+
+<h3 id="两数之和">两数之和</h3>
+
+<ul>
+  <li>
+    <p>题目</p>
+
+    <p><img src="https://s2.loli.net/2022/01/12/lTESyCzU9owi8nm.png" alt="image-20220112172016990"></p>
+
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span> <span class="p">:</span>
+                    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>注意点：</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">Tab</code>向右缩进，<code class="language-plaintext highlighter-rouge">shift+Tab</code>向左缩进</p>
+
+        <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">#python3的格式
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        
+<span class="c1">#python2的格式
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="s">"""
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="112">1.12</h2>
+
+<h3 id="回文数">回文数</h3>
+
+<ul>
+  <li>
+    <p>题目</p>
+
+    <p><img src="https://s2.loli.net/2022/01/12/HDlO273mpx6BTsG.png" alt="image-20220112163355680"></p>
+
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">a</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>注意点：python 中[:-1]和[::-1]的区别：</p>
+
+    <ul>
+      <li>
+        <p>[::-1] 顺序相反操作，[:-1] 读取倒数第一个元素</p>
+
+        <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="o">=</span><span class="s">'python'</span>
+<span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1">#nohtyp
+</span>     
+<span class="n">c</span><span class="o">=</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">#nhy
+</span>     
+<span class="n">d</span><span class="o">=</span><span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1">#从位置0到位置-1之前的数
+</span><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>  <span class="c1">#pytho
+</span>     
+<span class="n">e</span><span class="o">=</span><span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1">#从位置0到位置-2之前的数
+</span>     
+<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>  <span class="c1">#pyth
+</span></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>[::-2]表示从最后一个元素以步长为二向前读取元素</p>
+
+        <p>[1:4:2]表示从第一个元素以步长为二向后读取到第三个元素</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>##1.13</p>
+
+<h3 id="至少是其他数字两倍的最大数">至少是其他数字两倍的最大数</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/13/KEFqUQWuygliCXp.png" alt="image-20220113103540152"></p>
+
+<p>思路：先用max函数找到列表中的最大值，然后遍历列表，记录下最大值的索引，当列表中的数字不满足条件时，直接返回-1</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">dominantIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span><span class="nb">int</span><span class="p">:</span>
+        <span class="n">flag</span><span class="o">=-</span><span class="mi">1</span>
+        <span class="n">m</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">m</span><span class="p">:</span>
+                <span class="n">flag</span><span class="o">=</span><span class="n">i</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">m</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="o">&gt;</span><span class="n">m</span><span class="p">:</span>
+                <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">flag</span>
+</code></pre></div></div>
+
+<h3 id="二叉树的中序遍历">二叉树的中序遍历</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/13/TnKi3kcDYWjrp2H.png" alt="image-20220113191944604"></p>
+
+<p><img src="https://s2.loli.net/2022/01/13/pXVrQgP458ecjIO.png" alt="image-20220113192014463"></p>
+
+<p><img src="https://s2.loli.net/2022/01/13/DBhV6CqNE9KULTY.png" alt="image-20220113192036674"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">inorderTraversal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">root</span><span class="o">==</span><span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">inorderTraversal</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">left</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">inorderTraversal</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">inorderTraversal</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">left</span><span class="p">)</span><span class="o">+</span><span class="p">[</span><span class="n">root</span><span class="p">.</span><span class="n">val</span><span class="p">]</span><span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">inorderTraversal</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="二叉树的最大深度">二叉树的最大深度</h3>
+
+<p>题目:</p>
+
+<p><img src="https://s2.loli.net/2022/01/13/C9AloJ6SWUINXVr.png" alt="image-20220113191849497"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">maxDepth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">root</span><span class="o">==</span><span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="bp">self</span><span class="p">.</span><span class="n">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">left</span><span class="p">)</span>
+            <span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="bp">self</span><span class="p">.</span><span class="n">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="最大共同前缀">最大共同前缀</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/13/i9Pq8TfUVhANzmC.png" alt="image-20220113215011583"></p>
+
+<ul>
+  <li>方法一:横向扫描</li>
+</ul>
+
+<p><img src="https://s2.loli.net/2022/01/14/8vcGgMJjQftoeDq.png" alt="image-20220114001206621"></p>
+
+<p>思路：如果字符串列表为空，返回”“；将第一个字符串和第二个字符串求共同前缀，然后再将之前求到的共同前缀和第三个字符串求共同前缀,如此反复直到最后一个。第一个字符串的第一个字符如果和第二个字符串的第一个字符相同，就将第一个字符记作共同前缀，第二个字符如果仍相同，则将第二个字符也记录进之前求得的共同前缀中，直到出现不同的字符。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">b</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">str</span><span class="p">:</span>
+    <span class="s">"返回两个字符串的最长前缀"</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">&gt;</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">=</span><span class="s">''</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">x</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">longestCommonPrefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">strs</span><span class="o">==</span><span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">''</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        	<span class="n">x</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">strs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="c1">#将第一个字符串和第二个字符串求共同前缀
+</span>		<span class="c1">#将之前求到的共同前缀和第三个字符串求共同前缀,如此反复直到最后一个
+</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">)):</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">strs</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">x</span>
+            
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">longestCommonPrefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">strs</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">""</span>
+        
+        <span class="n">prefix</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="p">):</span>
+            <span class="n">prefix</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">lcp</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">strs</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="p">:</span>
+                <span class="k">break</span>
+        
+        <span class="k">return</span> <span class="n">prefix</span>
+
+    <span class="k">def</span> <span class="nf">lcp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">):</span>
+        <span class="n">length</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">str1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">str2</span><span class="p">)),</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">length</span> <span class="ow">and</span> <span class="n">str1</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">str2</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">str1</span><span class="p">[:</span><span class="n">index</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>时间复杂度：O(mn)，其中 mm 是字符串数组中的字符串的平均长度，nn 是字符串的数量。最坏情况下，字符串数组中的每个字符串的每个字符都会被比较一次。</p>
+
+<p>空间复杂度：O(1)。使用的额外空间复杂度为常数。</p>
+
+<ul>
+  <li>
+    <p>方法二：纵向扫描</p>
+
+    <p>思路：纵向扫描时，从前往后遍历所有字符串的每一列，比较相同列上的字符是否相同，如果相同则继续对下一列进行比较，如果不相同则当前列不再属于公共前缀，当前列之前的部分为最长公共前缀。</p>
+
+    <p><img src="https://s2.loli.net/2022/01/13/Dn6gPEiC1qdhMm4.png" alt="image-20220113235647418"></p>
+
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">longestCommonPrefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">strs</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">""</span>
+          
+        <span class="n">length</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="ow">or</span> <span class="n">strs</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="p">)):</span>
+                <span class="k">return</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="n">i</span><span class="p">]</span>
+          
+        <span class="k">return</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>    </div>
+
+    <p>时间复杂度：O(mn)，其中 m 是字符串数组中的字符串的平均长度，nn是字符串的数量。最坏情况下，字符串数组中的每个字符串的每个字符都会被比较一次。</p>
+
+    <p>空间复杂度：O(1)。使用的额外空间复杂度为常数。</p>
+  </li>
+</ul>
+
+<h2 id="114">1.14</h2>
+
+<h3 id="罗马数字转整数">罗马数字转整数</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/14/4fX6UMSbzRsiQ1h.png" alt="image-20220114181556038"></p>
+
+<p><img src="https://s2.loli.net/2022/01/14/zCT81aIol7QOF3h.png" alt="image-20220114181616397"></p>
+
+<p><img src="https://s2.loli.net/2022/01/14/tbKdEITwFNrxGuQ.png" alt="image-20220114181639685"></p>
+
+<p>思路：如果当前的字符小于它后面的字符，就把这两个字符看作一个整体，值为后面的那个字符减去前面那个字符。如果当前的字符大于它后面的字符，值为每一位的字符的值相加</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">romanToInt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">val</span><span class="o">=</span><span class="p">{</span>
+            <span class="s">"I"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s">"V"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s">"X"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+            <span class="s">"L"</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
+            <span class="s">"C"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span>
+            <span class="s">"D"</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span>
+            <span class="s">"M"</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">t</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="c1">##当前看的是第几位罗马数字
+</span>        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+            <span class="k">if</span>  <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="n">val</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">&lt;</span><span class="n">val</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]]:</span>
+                <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="o">+</span><span class="n">val</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span><span class="o">-</span><span class="n">val</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="o">+</span><span class="n">val</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">t</span>
+</code></pre></div></div>
+
+<p>注意点：i+1&lt;len(s)</p>
+
+<h3 id="有效的括号">有效的括号</h3>
+
+<p>题目:</p>
+
+<p><img src="https://s2.loli.net/2022/01/14/cvUfsYWySowthAM.png" alt="image-20220114091411965"></p>
+
+<p><img src="https://s2.loli.net/2022/01/14/2IFhN3Ggd7p8BXP.png" alt="image-20220114091518735"></p>
+
+<p>思路：如果是左括号，则将其压入栈；如果是右括号，则将左括号出栈，判断出栈的左括号能否与右括号匹配。最后判断栈是否被清空</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isValid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">stack</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="p">{</span><span class="s">"("</span><span class="p">,</span><span class="s">"["</span><span class="p">,</span><span class="s">"{"</span><span class="p">}:</span>
+                <span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">stack</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">False</span>
+                <span class="n">x</span><span class="o">=</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">char</span><span class="o">==</span><span class="s">")"</span> <span class="ow">and</span> <span class="n">x</span><span class="o">!=</span><span class="s">"("</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">False</span>
+                <span class="k">if</span> <span class="n">char</span><span class="o">==</span><span class="s">"]"</span> <span class="ow">and</span> <span class="n">x</span><span class="o">!=</span><span class="s">"["</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">False</span>
+                <span class="k">if</span> <span class="n">char</span><span class="o">==</span><span class="s">"}"</span> <span class="ow">and</span> <span class="n">x</span><span class="o">!=</span><span class="s">"{"</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+          
+</code></pre></div></div>
+
+<p>注意点：空列表不等于None</p>
+
+<h2 id="115">1.15</h2>
+
+<h3 id="实现strstr">实现strStr()</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/15/Bq2NXxk8gRolZd1.png" alt="image-20220115075333231"></p>
+
+<p><img src="https://s2.loli.net/2022/01/15/c8Z2mpBM3AN9tya.png" alt="image-20220115075357719"></p>
+
+<p>思路：</p>
+
+<p>直接在haystack中找needle</p>
+
+<pre><code class="language-pyhton">class Solution:
+    def strStr(self, haystack: str, needle: str) -&gt; int:
+        for i in range (len(haystack)-len(needle)+1):
+            if haystack[i:i+len(needle)]==needle:
+                return i
+        return -1
+
+</code></pre>
+
+<h3 id="加一">加一</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/15/1xDydMSY9NjH4Ve.png" alt="image-20220115090440242"></p>
+
+<p><img src="https://s2.loli.net/2022/01/15/5LQNoJaMFWXYVkE.png" alt="image-20220115090501054"></p>
+
+<p>思路：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">plusOne</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">digits</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="p">))):</span>
+            <span class="k">if</span> <span class="n">digits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">9</span><span class="p">:</span>
+                <span class="n">digits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">digits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">digits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+                <span class="k">return</span> <span class="n">digits</span>
+        <span class="n">digits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">digits</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">digits</span>
+</code></pre></div></div>
+
+<p>注意点:1. 最后三句在for循环里面！！！</p>
+
+<p>​            2.学会断点调试</p>
+
+<h3 id="杨辉三角">杨辉三角</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/15/PiatvZTF8lcbXYm.png" alt="image-20220115112752634"></p>
+
+<p><img src="https://s2.loli.net/2022/01/15/GvOUIr5ADQjNeht.png" alt="image-20220115112826648"></p>
+
+<p>思路：每一行的第一个和最后一个元素是1，其他位置等于上一行前一列的元素与上一行同列的元素相加</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numRows</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="n">result</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numRows</span><span class="p">):</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">([])</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+                    <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<h2 id="116">1.16</h2>
+
+<h3 id="最后一个单词的长度">最后一个单词的长度</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/16/wobuPA1kUlFINVC.png" alt="image-20220116145505021"></p>
+
+<p><img src="https://s2.loli.net/2022/01/16/ChZFVdR3EL4fJem.png" alt="image-20220116145536795"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">lengthOfLastWord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">p</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">length</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">while</span> <span class="n">p</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span>
+            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">!=</span><span class="s">" "</span><span class="p">:</span>
+                <span class="n">length</span><span class="o">=</span><span class="n">length</span><span class="o">+</span><span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">length</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">length</span>
+        <span class="k">return</span> <span class="n">length</span>
+</code></pre></div></div>
+
+<h3 id="七进制数">七进制数</h3>
+
+<p>题目:</p>
+
+<p><img src="https://s2.loli.net/2022/01/16/LHX5j2qm6ibNsK1.png" alt="image-20220116151733706"></p>
+
+<p>思路：分十进制数大于零，等于0，小于0三种情况</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">convertToBase7</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span><span class="s">"0"</span>
+        <span class="n">old_num</span><span class="o">=</span><span class="n">num</span>
+        <span class="n">num</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="n">res</span><span class="o">=</span><span class="s">""</span>
+        <span class="k">while</span> <span class="n">num</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">temp</span><span class="o">=</span><span class="n">num</span><span class="o">%</span><span class="mi">7</span>
+            <span class="n">num</span><span class="o">=</span><span class="n">num</span><span class="o">//</span><span class="mi">7</span>
+            <span class="n">res</span><span class="o">=</span><span class="n">res</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">old_num</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">"-"</span><span class="o">+</span><span class="n">res</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+        <span class="k">return</span> <span class="n">res</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+</code></pre></div></div>
+
+<h3 id="买卖股票的最佳时机">买卖股票的最佳时机</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/16/8CpsBLowJkfxjhi.png" alt="image-20220116163548078"></p>
+
+<p>思路：将初始最大利润设为0，最低买入价格设为无限大。将数组中读取的价格和初始最低买入价格比较，取最小的；更新的利润；更新最大利润。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">maxProfit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">max_profit</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">min_price</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="s">'inf'</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">prices</span><span class="p">:</span>
+            <span class="n">min_price</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">min_price</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">update_profit</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="n">min_price</span>
+            <span class="n">max_profit</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">max_profit</span><span class="p">,</span><span class="n">update_profit</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">max_profit</span>
+</code></pre></div></div>
+
+<h2 id="117">1.17</h2>
+
+<h3 id="2的幂">2的幂</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/17/k1wSNaQ2lY8GE6n.png" alt="image-20220117170551487"></p>
+
+<p><img src="https://s2.loli.net/2022/01/17/XKJOgp6lRFr5tLW.png" alt="image-20220117170618265"></p>
+
+<p>思路：如果一个数不断除以2，最后剩下的余数为1，则该数为2的幂</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isPowerOfTwo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">while</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<h3 id="删除链表中的结点">删除链表中的结点</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/17/KnPS3j5Gouixrb2.png" alt="image-20220117171058678"></p>
+
+<p><img src="https://s2.loli.net/2022/01/17/LfgFPbcREA8xCSZ.png" alt="image-20220117171132823"></p>
+
+<p><img src="https://s2.loli.net/2022/01/17/u9vJaN71qzDnYoA.png" alt="image-20220117171206417"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">deleteNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="s">"""
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="ow">and</span> <span class="n">node</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+            <span class="n">node</span><span class="p">.</span><span class="n">val</span><span class="o">=</span><span class="n">node</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="n">val</span>
+            <span class="n">node</span><span class="p">.</span><span class="nb">next</span><span class="o">=</span><span class="n">node</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="nb">next</span>
+</code></pre></div></div>
+
+<h3 id="有效的完全平方数">有效的完全平方数</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/17/4ERZTN8VjmalvrK.png" alt="image-20220117170933045"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isPerfectSquare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">num</span>
+        <span class="k">while</span> <span class="n">left</span><span class="o">&lt;=</span><span class="n">right</span><span class="p">:</span>
+            <span class="n">mid</span><span class="o">=</span><span class="n">left</span><span class="o">+</span><span class="p">(</span><span class="n">right</span><span class="o">-</span><span class="n">left</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+            <span class="k">if</span> <span class="n">mid</span><span class="o">&gt;</span><span class="n">num</span><span class="o">/</span><span class="n">mid</span><span class="p">:</span>
+                <span class="n">right</span><span class="o">=</span><span class="n">mid</span><span class="o">-</span><span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">mid</span><span class="o">==</span><span class="n">num</span><span class="o">/</span><span class="n">mid</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">left</span><span class="o">=</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">left</span><span class="o">==</span><span class="n">num</span><span class="o">//</span><span class="n">left</span> <span class="ow">and</span> <span class="n">num</span><span class="o">%</span><span class="n">left</span><span class="o">==</span><span class="mi">0</span>
+</code></pre></div></div>
+
+<h3 id="斐波那契数">斐波那契数</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/17/B3mCXRiQfvNx2TS.png" alt="image-20220117170711105"></p>
+
+<p><img src="https://s2.loli.net/2022/01/17/YUV92KQhRdBHclW.png" alt="image-20220117170805731"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">n</span>
+        <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+        <span class="k">return</span> <span class="n">y</span>
+             
+</code></pre></div></div>
+
+<p>注意点：是x,y=y,x+y</p>
+
+<p>​               而不是x=y</p>
+
+<p>​                          y=x+y</p>
+
+<p>​              结果不一样</p>
+
+<h2 id="118">1.18</h2>
+
+<h3 id="删除有序数组中的重复项">删除有序数组中的重复项</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/18/SfXlhsc3UIB6D8e.png" alt="image-20220118171535803"></p>
+
+<p><img src="https://s2.loli.net/2022/01/18/AwqLzaREFvcCWey.png" alt="image-20220118171608357"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">removeDuplicates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">!=</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">=</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<h3 id="搜索插入位置">搜索插入位置</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/18/vVdiINQ2MhekuBb.png" alt="image-20220118171743440"></p>
+
+<p><img src="https://s2.loli.net/2022/01/18/SP9OX6EWmgpnhFf.png" alt="image-20220118171801230"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">searchInsert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">target</span><span class="o">&gt;</span><span class="n">nums</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">target</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">i</span>
+</code></pre></div></div>
+
+<h3 id="二进制求和">二进制求和</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/18/3RbKGtC2fPVzplx.png" alt="image-20220118171931577"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">addBinary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">,</span><span class="n">carry</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="s">""</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))):</span>
+            <span class="n">val</span> <span class="o">=</span><span class="n">carry</span>
+            <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+                <span class="n">val</span><span class="o">=</span><span class="n">val</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)])</span>
+            <span class="k">if</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+                <span class="n">val</span><span class="o">=</span><span class="n">val</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)])</span>
+            <span class="n">carry</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="n">val</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span><span class="n">val</span><span class="o">%</span><span class="mi">2</span>
+            <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">carry</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="环形链表">环形链表</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/18/958hx7qKOWUJLgN.png" alt="image-20220118172109269"></p>
+
+<p><img src="https://s2.loli.net/2022/01/18/ry2fTa43NlvWCqP.png" alt="image-20220118172216099"></p>
+
+<p>思路:设置一个快指针和一个慢指针，若二者可以重合，说明是环形链表</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">hasCycle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">fast</span><span class="p">,</span><span class="n">slow</span><span class="o">=</span><span class="n">head</span><span class="p">,</span><span class="n">head</span>
+        <span class="k">while</span> <span class="n">fast</span> <span class="ow">and</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+            <span class="n">fast</span><span class="p">,</span><span class="n">slow</span><span class="o">=</span><span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="nb">next</span><span class="p">,</span><span class="n">slow</span><span class="p">.</span><span class="nb">next</span>
+            <span class="k">if</span> <span class="n">fast</span><span class="o">==</span><span class="n">slow</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<h3 id="分发饼干">分发饼干</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/18/N1Fy429uHaSl8Rd.png" alt="image-20220118172336074"></p>
+
+<p><img src="https://s2.loli.net/2022/01/18/79vKXAQwfh83tVa.png" alt="image-20220118172401810"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findContentChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">s</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">g</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+                <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+</code></pre></div></div>
+
+<h2 id="119">1.19</h2>
+
+<h3 id="岛屿的周长">岛屿的周长</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/19/BlzEqJ2CfoXAr3y.png" alt="image-20220119102054375"></p>
+
+<p><img src="https://s2.loli.net/2022/01/19/maKrz86NsYOBQqT.png" alt="image-20220119102111688"></p>
+
+<p>思路：遍历每一块陆地，看它的左边和上边是否是水域或者边界。周长=2（左边+右边）</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">islandPerimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+        <span class="n">m</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">ans</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="c1">#只用看左边和上边
+</span>                    <span class="k">if</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                        <span class="n">ans</span><span class="o">=</span><span class="n">ans</span><span class="o">+</span><span class="mi">2</span>
+                    <span class="k">if</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                        <span class="n">ans</span><span class="o">=</span><span class="n">ans</span><span class="o">+</span><span class="mi">2</span>
+        <span class="k">return</span> <span class="n">ans</span>
+</code></pre></div></div>
+
+<h3 id="存在重复元素ii">存在重复元素II</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/19/C8aFzVuAxKZ1c4R.png" alt="image-20220119124624717"></p>
+
+<p><img src="https://s2.loli.net/2022/01/19/w8okO5jMvPrmB3g.png" alt="image-20220119124642783"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">containsNearbyDuplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">lookup</span><span class="o">=</span><span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">num</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
+                <span class="n">lookup</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="o">=</span><span class="n">i</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span><span class="o">-</span><span class="n">lookup</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">True</span>
+                <span class="n">lookup</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="o">=</span><span class="n">i</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<h3 id="区域和检索---数组不可变">区域和检索 - 数组不可变</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/19/WI52ph4snbkqLVC.png" alt="image-20220119124741131"></p>
+
+<p><img src="https://s2.loli.net/2022/01/19/KgbBOVTEIC8kcip.png" alt="image-20220119124753793"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">NumArray</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">a</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">sumRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span><span class="n">j</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+
+
+<span class="c1"># Your NumArray object will be instantiated and called as such:
+# obj = NumArray(nums)
+# param_1 = obj.sumRange(left,right)
+</span></code></pre></div></div>
+
+<h3 id="最小栈">最小栈</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/19/KhJiH6XxFgnkZpL.png" alt="image-20220119141933666"></p>
+
+<p><img src="https://s2.loli.net/2022/01/19/vela1hUWdGbicsX.png" alt="image-20220119141947314"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MinStack</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="o">=</span><span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">val</span><span class="p">,</span><span class="n">val</span><span class="p">))</span>
+            <span class="k">return</span>
+        <span class="n">curr_min</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">val</span><span class="p">,</span><span class="nb">min</span><span class="p">(</span><span class="n">curr_min</span><span class="p">,</span><span class="n">val</span><span class="p">)))</span>
+
+    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">top</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">getMin</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+
+<span class="c1"># Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
+</span></code></pre></div></div>
+
+<h3 id="最大子数组和">最大子数组和</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/19/nwgqof4IXipMPQW.png" alt="image-20220119125614864"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">curr_sum</span><span class="o">=</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">max_sum</span><span class="o">=</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">curr_sum</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">curr_sum</span><span class="o">=</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">curr_sum</span><span class="o">=</span><span class="n">curr_sum</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">max_sum</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">max_sum</span><span class="p">,</span><span class="n">curr_sum</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">max_sum</span>
+</code></pre></div></div>
+
+<h2 id="120">1.20</h2>
+
+<h3 id="第一个错误的版本">第一个错误的版本</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/22/m9ncyKdRYwvEWHJ.png" alt="image-20220122080600809"></p>
+
+<p><img src="https://s2.loli.net/2022/01/22/NPnIoWvFwKcA4ax.png" alt="image-20220122082610078"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># The isBadVersion API is already defined for you.
+# @param version, an integer
+# @return an integer
+# def isBadVersion(version):
+</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">firstBadVersion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="s">"""
+        :type n: int
+        :rtype: int
+        """</span>
+        <span class="n">start</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">end</span><span class="o">=</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">start</span><span class="o">&lt;</span><span class="n">end</span><span class="p">:</span>
+            <span class="n">mid</span><span class="o">=</span><span class="n">start</span><span class="o">+</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+            <span class="k">if</span> <span class="n">isBadVersion</span><span class="p">(</span><span class="n">mid</span><span class="p">):</span>
+                <span class="n">end</span><span class="o">=</span><span class="n">mid</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">start</span><span class="o">=</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="n">isBadVersion</span><span class="p">(</span><span class="n">start</span><span class="p">)</span><span class="o">==</span><span class="bp">True</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">start</span>
+        <span class="k">if</span> <span class="n">isBadVersion</span><span class="p">(</span><span class="n">end</span><span class="p">)</span><span class="o">==</span><span class="bp">True</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">end</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<h2 id="122">1.22</h2>
+
+<h3 id="检测大写字母">检测大写字母</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/20/tOvcsLabWNZM3xl.png" alt="image-20220120194121589"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">detectCapitalUse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">cap</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">char</span><span class="p">.</span><span class="n">isupper</span><span class="p">():</span>
+                <span class="n">cap</span><span class="o">=</span><span class="n">cap</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="n">cap</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">cap</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">cap</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">isupper</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<h2 id="123">1.23</h2>
+
+<h3 id="键盘行">键盘行</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/20/S6ZmkVOrJ8bgiEd.png" alt="image-20220120194349112"></p>
+
+<p><img src="https://s2.loli.net/2022/01/20/QlBO7Uxcpd5wgqh.png" alt="image-20220120194409290"></p>
+
+<p>思路：先建立三个list，把三行字母放在可以查找的空间里。先查找一个单词的首字母在哪一行，再看它其余的所有字母跟首字母是否在同一行，如果在同一行，就把这个单词添加到结果中。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findWords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="n">top</span><span class="o">=</span><span class="p">[</span><span class="s">'q'</span><span class="p">,</span><span class="s">'w'</span><span class="p">,</span><span class="s">'e'</span><span class="p">,</span><span class="s">'r'</span><span class="p">,</span><span class="s">'t'</span><span class="p">,</span><span class="s">'y'</span><span class="p">,</span><span class="s">'u'</span><span class="p">,</span><span class="s">'i'</span><span class="p">,</span><span class="s">'o'</span><span class="p">,</span><span class="s">'p'</span><span class="p">]</span>
+        <span class="n">middle</span><span class="o">=</span><span class="p">[</span><span class="s">'a'</span><span class="p">,</span><span class="s">'s'</span><span class="p">,</span><span class="s">'d'</span><span class="p">,</span><span class="s">'f'</span><span class="p">,</span><span class="s">'g'</span><span class="p">,</span><span class="s">'h'</span><span class="p">,</span><span class="s">'j'</span><span class="p">,</span><span class="s">'k'</span><span class="p">,</span><span class="s">'l'</span><span class="p">]</span>
+        <span class="n">bottom</span><span class="o">=</span><span class="p">[</span><span class="s">'z'</span><span class="p">,</span><span class="s">'x'</span><span class="p">,</span><span class="s">'c'</span><span class="p">,</span><span class="s">'v'</span><span class="p">,</span><span class="s">'b'</span><span class="p">,</span><span class="s">'n'</span><span class="p">,</span><span class="s">'m'</span><span class="p">]</span>
+        <span class="n">rows</span><span class="o">=</span><span class="p">[</span><span class="n">top</span><span class="p">,</span><span class="n">middle</span><span class="p">,</span><span class="n">bottom</span><span class="p">]</span>
+        <span class="n">output</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+                    <span class="n">result_low</span><span class="o">=</span><span class="n">row</span>
+                    <span class="k">break</span>
+            <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+                <span class="n">j</span><span class="o">=</span><span class="mi">0</span>
+                <span class="k">if</span> <span class="n">char</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+                    <span class="n">j</span><span class="o">=-</span><span class="mi">1</span>
+                    <span class="k">break</span>   
+            <span class="k">if</span> <span class="n">j</span><span class="o">!=-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">output</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output</span>
+</code></pre></div></div>
+
+<h2 id="124">1.24</h2>
+
+<h3 id="丑数">丑数</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/24/RUXHTYSdkFQlGbB.png" alt="image-20220124092154164"></p>
+
+<p><img src="https://s2.loli.net/2022/01/24/q7utowAjE3fW19m.png" alt="image-20220124092213370"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isUgly</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
+            <span class="k">while</span> <span class="n">num</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">num</span><span class="o">=</span><span class="n">num</span><span class="o">/</span><span class="n">i</span>
+        <span class="k">return</span> <span class="n">num</span><span class="o">==</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<h3 id="相交链表">相交链表</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/24/OZlVBUpNucXRGLr.png" alt="image-20220124095249822"></p>
+
+<p><img src="https://s2.loli.net/2022/01/24/CFmIDx576WkZqdK.png" alt="image-20220124095411699"></p>
+
+<p><img src="https://s2.loli.net/2022/01/24/ImCbK3i57VZHwDr.png" alt="image-20220124095436774"></p>
+
+<p>思路：从两个链表各自的开头开始遍历，当其中一条最后为空而另一条还没有遍历到最后时，跳到另外一个链表开头，继续遍历。反复交换开头进行遍历，直到相等或都为空</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">getIntersectionNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">headA</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">headB</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
+        <span class="n">p1</span><span class="o">=</span><span class="n">headA</span>
+        <span class="n">p2</span><span class="o">=</span><span class="n">headB</span>
+        <span class="k">while</span> <span class="n">p1</span><span class="o">!=</span><span class="n">p2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">p1</span><span class="p">:</span>
+                <span class="n">p1</span><span class="o">=</span><span class="n">headB</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">.</span><span class="nb">next</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">p2</span><span class="p">:</span>
+                <span class="n">p2</span><span class="o">=</span><span class="n">headA</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">.</span><span class="nb">next</span>
+        <span class="k">return</span> <span class="n">p1</span>
+</code></pre></div></div>
+
+<h3 id="excel-表列序号">Excel 表列序号</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/24/Xalx1svNkPTrzu9.png" alt="image-20220124102055474"></p>
+
+<p><img src="https://s2.loli.net/2022/01/24/bvK2VLwDq6BCHml.png" alt="image-20220124102111459"></p>
+
+<p>思路： 对于每一位，结果等于这一位转换为数字减去A转换为数字再加1；从左往右读进的每一个数都要乘以26</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">titleToNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+        <span class="s">"""
+        :type s: str
+        :rtype: int
+        """</span>
+        <span class="n">result</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))):</span>
+            <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="o">*</span><span class="mi">26</span>
+            <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="o">+</span><span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="nb">ord</span><span class="p">(</span><span class="s">'A'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<h2 id="125">1.25</h2>
+
+<h3 id="存在连续三个奇数的数组">存在连续三个奇数的数组</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/25/g6mqSIhnRFeWjO7.png" alt="image-20220125210720157"></p>
+
+<p>思路：一个整数对2取模，余数为0则为偶数，余数为1则为奇数。用count来计数，遇到奇数加一，遇到偶数清零</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">threeConsecutiveOdds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+                <span class="k">if</span> <span class="n">count</span><span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<h3 id="最大连续1的个数">最大连续1的个数</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/25/hta5PfodBUl1uCx.png" alt="image-20220125212147910"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findMaxConsecutiveOnes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">result</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">num</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">count</span><span class="p">)</span>
+                <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="126">1.26</h2>
+
+<h3 id="两个数组的交集">两个数组的交集</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/26/Pc2lGws5xKjXToF.png" alt="image-20220126082459988"></p>
+
+<p>思路：以nums1为基础，如果nums2中出现了和nums1中相同的元素，就把该元素添加进结果中，并且删除nums1中该元素</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">intersection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">lookup</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nums1</span><span class="p">:</span>
+            <span class="n">lookup</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nums2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">+=</span><span class="n">i</span><span class="p">,</span>
+                <span class="n">lookup</span><span class="p">.</span><span class="n">discard</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<p>​</p>
+
+<h3 id="单词规律">单词规律</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/26/GvqUHyQAibuMz7C.png" alt="image-20220126084213879"></p>
+
+<p><img src="https://s2.loli.net/2022/01/26/4XvL8exrbFD3McU.png" alt="image-20220126084258249"></p>
+
+<p>思路：先把str划分成一个个的单词。如果字母数量和单词数量不一样，返回False。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">wordPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">words</span><span class="o">=</span><span class="nb">str</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span><span class="o">!=</span><span class="nb">len</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="n">hashmap</span><span class="o">=</span><span class="p">{}</span>
+        <span class="n">mapval</span><span class="o">=</span><span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pattern</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">pattern</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">hashmap</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">hashmap</span><span class="p">[</span><span class="n">pattern</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">!=</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="k">return</span> <span class="bp">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">mapval</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">False</span>
+            <span class="n">hashmap</span><span class="p">[</span><span class="n">pattern</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">mapval</span><span class="p">[</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<h3 id="移动零">移动零</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/26/P8NkLQuEDnslWR1.png" alt="image-20220126084411465"></p>
+
+<p>思路：将不为0的数全部移到前面，再将之后的位置上的数变为0</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">moveZeroes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="s">"""
+        Do not return anything, modify nums in-place instead.
+        """</span>
+        <span class="n">pos</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">=</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">pos</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+</code></pre></div></div>
+
+<h3 id="各位相加">各位相加</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/26/TfQRCzrb8nHUXgv.png" alt="image-20220126084521767"></p>
+
+<p>思路：输入个位数，输出是它本身。</p>
+
+<p>​          输入大于等于十的整数，输出结果为1,2,3,4,5,6,7,8,9,1（19),2（20），……，9,1,……</p>
+
+<p>​         当输入38，（38-1）mod 9=37 mod 9=1    1+1=2</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">addDigits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">=</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">9</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<h2 id="128">1.28</h2>
+
+<h3 id="反转字符串">反转字符串</h3>
+
+<p>题目：</p>
+
+<p><img src="https://s2.loli.net/2022/01/28/UKDuWPgxYOrX4Q3.png" alt="image-20220128201846456"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="s">"""
+        Do not return anything, modify s in-place instead.
+        """</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>​</p>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/ruirui-daydayup/python/2022/01/10/python%E5%9F%BA%E7%A1%80.html" title=" python基础"> python基础</a><span></span>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/ruirui-daydayup/markdown/2017/06/10/quick-mardown-example.html" title="">Quick markdown example</a></li>
+<li><a class="post-link" href="/ruirui-daydayup/junk/2016/08/12/my-example-post.html" title="">My Example Post</a></li>
+<li><a class="post-link" href="/ruirui-daydayup/markdown/2015/02/28/test-markdown.html" title="">Test markdown</a></li>
+<li><a class="post-link" href="/ruirui-daydayup/markdown/2018/12/05/an-exhibit-of-markdown.html" title="">An exhibit of Markdown</a></li>
+</ul>
+    </div>
+<div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ruirui-daydayup/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+      <div>Unpublished Work (cleft) 2017-{currentYear} {author} @ruirui-daydayup</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/ruirui-daydayup/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
